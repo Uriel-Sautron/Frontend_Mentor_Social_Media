@@ -50,8 +50,23 @@ body {
 
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
-  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youTube: hsl(348, 97%, 39%);
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  background: var(--card-bg);
+  padding: 2em 0;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.number {
+  font-size: 4em;
+  color: var(--primary-txt);
+  font-variation-settings: "wght" 700;
 }
 
 /* User Section */
@@ -63,18 +78,44 @@ body {
 }
 
 .user-section__card {
+  flex-direction: column;
+  align-items: center;
+  border-top: 0.25em solid white;
+  border-radius: 0.25em;
+}
+
+.user-section__card--facebook {
+  border-color: var(--facebook);
+}
+
+.user-section__card--twitter {
+  border-color: var(--twitter);
+}
+
+.user-section__card--insta:before {
+  content: "";
+  height: 0.25em;
+  width: 100%;
+  background: var(--instagram);
+  position: absolute;
+  top: -0.25em;
+  left: 0;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+
+.user-section__card--youTube {
+  border-color: var(--youTube);
+}
+
+.user-section__sub {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background-color: var(--secondary-bg);
-  padding: 1em 0;
-  margin-bottom: 1em;
-  border-top: 0.25em solid white;
+  margin: 1.5em 0;
 }
 
-.user-section__card__number {
-  font-size: 2.5em;
-  color: var(--primary-txt);
-  font-variation-settings: "wght" 700;
+.user-section__followers {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
 }
