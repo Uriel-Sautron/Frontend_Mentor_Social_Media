@@ -2,47 +2,6 @@
   font-family: "Inter";
   src: url("./asset/font/inter/Inter-VariableFont_slnt\,wght.ttf");
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Inter";
-}
-
-header,
-main {
-  padding: 0 1.5em;
-}
-
-h1,
-h2 {
-  font-variation-settings: "wght" 400;
-}
-p {
-  color: var(--secondary-txt);
-}
-header {
-  padding-top: 1.5em;
-}
-
-header p {
-  font-weight: bold;
-  font-size: 0.75em;
-}
-
-header h1 {
-  font-size: 1.25em;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  color: var(--primary-txt);
-  background-color: var(--primary-bg);
-}
 
 :root {
   --lime-breen: hsl(163, 72%, 41%);
@@ -54,13 +13,59 @@ body {
   --youTube: hsl(348, 97%, 39%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-txt);
+  background-color: var(--primary-bg);
+}
+
+header,
+main {
+  padding: 0 1.5em;
+}
+
+header {
+  padding-top: 1.5em;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-variation-settings: "wght" 400;
+  margin-bottom: 0.25em;
+}
+
+header p {
+  font-variation-settings: "wght" 700;
+  font-size: 0.9em;
+  color: var(--secondary-txt);
+}
+
+.toggle-theme {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+  padding: 2em 0 4em 0;
+  border-top: 2px solid var(--card-bg);
+}
+
 .card {
   display: flex;
   width: 100%;
   background: var(--card-bg);
-  padding: 2em 0;
-  margin-bottom: 1em;
   position: relative;
+  border-radius: 0.25em;
+  padding: 2em 2em;
 }
 
 .number {
@@ -81,7 +86,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-top: 0.25em solid white;
-  border-radius: 0.25em;
+  margin-bottom: 2em;
 }
 
 .user-section__card--facebook {
@@ -108,6 +113,17 @@ body {
   border-color: var(--youTube);
 }
 
+.user-section__username {
+  display: flex;
+  color: var(--secondary-txt);
+  font-size: 0.75em;
+  font-variation-settings: "wght" 700;
+}
+
+.user-section__username img {
+  margin-right: 0.75em;
+}
+
 .user-section__sub {
   display: flex;
   flex-direction: column;
@@ -116,6 +132,76 @@ body {
 }
 
 .user-section__followers {
+  color: var(--secondary-txt);
   text-transform: uppercase;
   letter-spacing: 0.25em;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  font-variation-settings: "wght" 700;
+}
+
+.stat img {
+  margin-right: 0.3em;
+}
+
+.stat--up {
+  color: var(--lime-breen);
+}
+
+.stat--down {
+  color: var(--bright-red);
+}
+
+/* Overview Section */
+
+.overwiew-section {
+  margin-top: 2em;
+}
+
+.overwiew-section h1 {
+  margin-bottom: 1em;
+}
+
+.overwiew-section__card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+.overwiew-section__card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overwiew-section__card-content--top {
+  color: var(--secondary-txt);
+  margin-bottom: 2em;
+  font-variation-settings: "wght" 700;
+}
+
+.overwiew-section__card-content--top p {
+  font-variation-settings: "wght" 700;
+  font-size: 0.9em;
+  color: var(--secondary-txt);
+}
+
+.overwiew-section__card-content--bottom {
+  align-items: baseline;
+}
+
+.number--small-card {
+  font-size: 2em;
+}
+
+/* Footer */
+footer {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
 }
