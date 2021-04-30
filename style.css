@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   color: var(--primary-txt);
   background-color: var(--primary-bg);
+  position: relative;
 }
 
 header,
@@ -49,6 +50,16 @@ header p {
   font-variation-settings: "wght" 700;
   font-size: 0.9em;
   color: var(--secondary-txt);
+}
+
+.bg-top {
+  height: 30%;
+  background: var(--secondary-bg);
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 /* Header */
@@ -126,9 +137,18 @@ input:checked + .slider:before {
   display: flex;
   width: 100%;
   background: var(--card-bg);
-  position: relative;
   border-radius: 0.25em;
   padding: 2em 2em;
+}
+
+.dark-theme .card:hover {
+  cursor: pointer;
+  filter: brightness(1.4);
+}
+
+.light-theme .card:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
 }
 
 .number {
@@ -147,10 +167,11 @@ input:checked + .slider:before {
 
 .user-section__card {
   flex-direction: column;
-  height: auto;
   align-items: center;
   border-top: 0.25em solid white;
   margin-bottom: 2em;
+  justify-content: space-between;
+  position: relative;
 }
 
 .user-section__card--facebook {
@@ -264,13 +285,22 @@ input:checked + .slider:before {
 footer {
   font-size: 0.75em;
   text-align: center;
+  color: var(--secondary-txt);
+  margin-bottom: 1em;
 }
 
 footer a {
-  color: hsl(228, 45%, 44%);
+  color: var(--secondary-txt);
+  text-decoration: none;
+  font-variation-settings: "wght" 700;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 765px) {
+  header,
+  main {
+    padding: 0 10em;
+  }
+
   .user-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -284,7 +314,12 @@ footer a {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
+  header,
+  main {
+    padding: 0 10em;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
