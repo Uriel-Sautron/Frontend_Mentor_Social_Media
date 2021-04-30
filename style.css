@@ -147,6 +147,7 @@ input:checked + .slider:before {
 
 .user-section__card {
   flex-direction: column;
+  height: auto;
   align-items: center;
   border-top: 0.25em solid white;
   margin-bottom: 2em;
@@ -267,4 +268,47 @@ footer {
 
 footer a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 375px) {
+  .user-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+  }
+
+  .overwiew-section__group-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toggle-theme {
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+
+  .toggle-theme p {
+    margin-right: 1em;
+  }
+  .user-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+  }
+
+  .overwiew-section__group-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+  }
 }

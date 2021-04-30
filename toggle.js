@@ -1,7 +1,7 @@
 const toggle = document.querySelector("input");
 const body = document.querySelector("body");
 
-toggle.addEventListener("click", () => {
+const checkTheme = () => {
   if (toggle.checked) {
     body.classList.remove("dark-theme");
     body.classList.add("light-theme");
@@ -9,4 +9,6 @@ toggle.addEventListener("click", () => {
     body.classList.remove("light-theme");
     body.classList.add("dark-theme");
   }
-});
+};
+
+toggle.addEventListener("click", () => checkTheme());
